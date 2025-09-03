@@ -1,19 +1,10 @@
-body{
-    height: 100%;
-}
 *{
     margin: 0px;
     padding: 0px;
-    font-family:'Century Gothic', 'Didact Gothic', 'Inter';
-    color: white;
-    scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
 }
 a{
-    cursor: url('assets/cursors/fuckyou.png'), auto;
-}
-button{
     cursor: url('assets/cursors/fuckyou.png'), auto;
 }
 html{
