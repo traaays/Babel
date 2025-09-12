@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+a{
+    cursor: url('assets/cursors/fuckyou.png'), auto;
+    color: white;
+    text-decoration: none;
+}
+html{
+    font-family: "Helvetica Neue", Helvetica, "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei New", "Microsoft YaHei", "微软雅黑", 宋体, SimSun;
+    color: white;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0), 
+        rgba(255, 255, 255, 0)
+      ), 
+      url('assets/tiles/paperbg2.png');;
+    background-size: 100%;
+    background-repeat: cover;
+    image-rendering: crisp-edges;
+
+    cursor: url('assets/cursors/cursor1.png'), auto;
+    
+    animation: pan 60s linear infinite;
+}
+@keyframes pan{
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+.center{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.37));
+}
+.smallText{
+    font-family: 'MS PGothic', 'ＭＳ Ｐゴシック', Georgia, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+#table{
+    animation: scaleTable 4s;
+}
+@keyframes scaleTable {
+    0% {
+        transform: scaleX(1);
+    }
+    25%
+    {
+        transform: scaleX(1);
+    }
+    100%
+    {
+        transform: scaleX(3);
+    }
+}
