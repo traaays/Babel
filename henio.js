@@ -47,17 +47,17 @@ aNektarynka.addEventListener("click", () => {
     }, 140);
     if (henioState == 0) {
         henioState = 3;
-        imgHenio.src = "assets/babel/nekta/nekta1.png";
+        imgHenio.src = "assets/babel/nekta/nekta1hq.png";
         nekta.play();
         setTimeout(() => {
             henioState = henioState + 1;
-            imgHenio.src = "assets/babel/nekta/nekta2.png";
+            imgHenio.src = "assets/babel/nekta/nekta2hq.png";
             setTimeout(() => {
                 henioState = henioState + 1;
-                imgHenio.src = "assets/babel/nekta/nekta3.png";
+                imgHenio.src = "assets/babel/nekta/nekta3hq.png";
                 setTimeout(() => {
                     henioState = henioState + 1;
-                    imgHenio.src = "assets/babel/nekta/nekta4.png";
+                    imgHenio.src = "assets/babel/nekta/nekta4hq.png";
                     setTimeout(() => {
                         henioState = 0;
                         imgHenio.src = "assets/babel/withTP/babelstand.png";
