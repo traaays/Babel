@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herr Sender</title>
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        html {
+            background: linear-gradient(
+            rgba(145, 145, 145, 0.397), 
+            rgba(0, 0, 0, 0.411)
+            ), 
+            url("https://raw.githubusercontent.com/TimeStepYT/DeltaruneTextboxes/refs/heads/master/logo.png");
+            background-size: 25%;
+            background-repeat: cover;
+            animation: pan 80s linear infinite;
+            font-family:'Century Gothic', 'Didact Gothic', 'Inter';
+        }
+        @keyframes pan{
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .center {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1vh;
+            filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.493));
+            color: white;
+        }
+        .text{
+            filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.493));
+        }
+        #topText{
+            width: 10vw;
+        }
+        #midText{
+            width: 40vw;
+            height: 20vh;
+        }
+        #botText{
+            width: 15vw;
+        }
+    </style>
+
+
+    <div class="center">
+        <p class="text">websocket::</p>
+        <input type="text" id="webText">
+        <button id="websocketButton"><p> connect to websocket </p></button>
+        <p class="text">top:</p>
+        <input type="text" id="topText">
+        <p class="text">middle:</p>
+        <textarea type="text" id="midText"></textarea>
+        <p class="text">bottom:</p>
+        <input type="text" id="botText">
+        <p class="text">bottombottom:</p>
+        <input type="text" id="bot2Text">
+        <button id="sendAlertButton"><p> send alert </p></button>
+        <button id="sendDialogueButton"><p> send dialogue </p></button>
+    </div>
+
+
+    <script>
+        const websocketButton = document.getElementById("websocketButton")  
+        const sendAlertButton = document.getElementById("sendAlertButton");
+        const sendDialogueButton = document.getElementById("sendDialogueButton")    
+
+        const webText = document.getElementById("webText");
+        const topText = document.getElementById("topText");
+        const midText = document.getElementById("midText");
+        const botText = document.getElementById("botText");
+        const bot2Text = document.getElementById("bot2Text");
+
+        let ws = undefined
+        let interval = undefined
+
+        websocketButton.addEventListener("click", () => {
+            ws = new WebSocket(webText.value)
+            console.log(webText.value)
+            ws.onopen = () => {
+            interval = setInterval(() => {ws.send("/ping")}, 10000)
+            }
+            ws.onclose = () => {clearInterval(interval)}
+            ws.onmessage = e => console.log(e.data)
+        });
+        sendAlertButton.addEventListener("click", () => {
+            ws.send("/broadcast /alert " + topText.value + "~|~" + midText.value + "~|~" + botText.value + "~|~" + bot2Text.value)
+        });
+        sendDialogueButton.addEventListener("click", () => {
+            ws.send("/broadcast /dialog " + topText.value + "~|~" + midText.value + "~|~" + botText.value + "~|~" + bot2Text.value)
+        }); 
+
+    </script>
+
+</body>
+</html>
