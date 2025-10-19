@@ -23,7 +23,7 @@ html {
     ;
     */
     background-size: 10%;
-    background-repeat: cover;
+    background-repeat: repeat;
     image-rendering: crisp-edges;
 
     cursor: url('assets/cursors/cursor1.png'), auto;

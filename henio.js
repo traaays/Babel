@@ -16,8 +16,6 @@ const aNektarynka = document.getElementById("nektarynkaA");
 const nekta = document.getElementById("nektarynkaAud");
 const fnaf = document.getElementById("fnafAud");
 
-
-
 aHenio.addEventListener("click", () => {
     if (henioState == 0) {
         henioState = henioState + 1;
