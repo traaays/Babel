@@ -5,7 +5,7 @@
     overflow-x: hidden;
 }
 a{
-    cursor: url('assets/cursors/fuckyou.png'), auto;
+    cursor: url('assets/cursors/cursor_select.png'), auto;
     color: white;
     text-decoration: none;
 }
@@ -21,7 +21,7 @@ html{
     background-repeat: cover;
     image-rendering: crisp-edges;
 
-    cursor: url('assets/cursors/cursor1.png'), auto;
+    cursor: url('assets/cursors/cursor.png'), auto;
     
     animation: pan 60s linear infinite;
 }
@@ -40,8 +40,8 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("test2.gif");
-    opacity: 7%;
+    background: url("assets/noise.gif");
+    opacity: 8%;
   }
 .center{
     height: 100vh;
@@ -55,4 +55,13 @@ html{
 }
 #table{
     z-index: 100;
+    position: absolute; 
+    top: 570px; 
+}
+#aHenio{
+    z-index: 200;
+    scale: 50%; 
+    position: absolute; 
+    top: 45px;
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.768));
 }
