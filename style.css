@@ -23,7 +23,7 @@ html{
 
     cursor: url('assets/cursors/cursor.png'), auto;
     
-    animation: pan 50s linear infinite;
+    animation: pan 70s linear infinite;
 }
 @keyframes pan{
     0% {
@@ -52,6 +52,12 @@ html{
 .smallText{
     font-family: 'MS PGothic', 'ＭＳ Ｐゴシック', Georgia, Arial, Helvetica, sans-serif;
     font-size: 22px;
+}
+#title{
+    z-index: 5000;
+    position: absolute;
+    top: -3.5%;
+    left: 0%;
 }
 #scrollArrows{
     z-index: 400;
@@ -88,7 +94,8 @@ html{
 #table{
     z-index: 100;
     position: absolute; 
-    top: 620px; 
+    top: 620px;
+    width: max-content; 
 }
 #divHenio{
     z-index: 200;
