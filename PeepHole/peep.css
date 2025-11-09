@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('assets/bgwithtext2.png');
+    background-size: cover;              
+    background-position: center bottom; 
+    
+}
+#aHenio {
+    position: absolute;
+    bottom: -4vw; 
+    left: 19vw;
+    z-index: 100;
+    width: 28vw;
+    height: 46vw; 
+}
+

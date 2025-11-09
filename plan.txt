@@ -1,0 +1,7 @@
+make like a 1000x1000 template img for the thingies. every button can be the same size.
+I have like 5 thingies, if I press right and it goes off screen it gets positioned to the other side
+thingie number 1 can become thingie number 1,2,3,4,5 cuz of code, I hope ill understand this tomorrow or whenever I start working on it
+like no thingie is unique, just the imgs and hrefs that will be changed with js
+
+id like to have an entry animation where Henio and the table slide up, while the title slides down
+idk if im gonna be able to to that

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="peep.css">
+    <title>peep</title>
+</head>
+<body>
+    <div>
+        <a id="aHenio" href="../Babel/index.html"><img src="assets/henio1.png" id="imgHenio"></a>
+    </div>
+
+    <script>
+        const imgHenio = document.getElementById("imgHenio");
+        const aHenio = document.getElementById("aHenio");
+
+        aHenio.addEventListener("mouseover", () => {
+            imgHenio.src = "assets/henio2.png";
+        });
+
+        aHenio.addEventListener("mouseleave", () => {
+            imgHenio.src = "assets/henio1.png";
+        });
+    </script>
+</body>
+</html>
+

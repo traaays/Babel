@@ -54,10 +54,11 @@ html{
     font-size: 22px;
 }
 #title{
-    z-index: 5000;
+    z-index: 5;
     position: absolute;
     top: -3.5%;
     left: 0%;
+    filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.63));
 }
 #scrollArrows{
     z-index: 400;
