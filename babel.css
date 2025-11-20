@@ -71,3 +71,13 @@ html {
 .click {
     transform: translateX(40vw) translateY(-1vw) scale(0.7);
 }
+
+#aquariumA{
+    position: fixed;
+    bottom: 4vh;
+    right: 3vw;
+    transition: transform 0.5s;
+    z-index: 999;
+    image-rendering: auto;
+    filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.61));
+}
