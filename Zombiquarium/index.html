@@ -14,9 +14,19 @@ html, body, #canvas {
 
 body {
 	color: white;
-	background-color: #000000;
 	overflow: hidden;
 	touch-action: none;
+
+	background: linear-gradient(
+        rgba(0, 0, 0, 0.853), 
+        rgba(0, 0, 0, 0.938)
+      ), 
+      url('tile2.png');;
+    background-size: 25%;
+    background-repeat: repeat;
+    image-rendering: crisp-edges;
+
+    animation: pan 40s linear infinite;
 }
 
 #canvas {
@@ -54,7 +64,6 @@ body {
     background-repeat: repeat;
     image-rendering: crisp-edges;
 
-    cursor: url('assets/cursors/cursor1.png'), auto;
 
     animation: pan 40s linear infinite;
 }
@@ -134,7 +143,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9788892,"index.wasm":38034280},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9788508,"index.wasm":38034280},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
