@@ -10,18 +10,23 @@ html, body, #canvas {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	height: 100%;	
 }
 
 body {
-	color: white;
-	overflow: hidden;
-	touch-action: none;
+    color: white;
+    overflow: hidden;
+    touch-action: none;
 
-	background: linear-gradient(
+    display: flex;              
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
         rgba(0, 0, 0, 0.853), 
         rgba(0, 0, 0, 0.938)
       ), 
-      url('tile2.png');;
+      url('tile2.png');
     background-size: 25%;
     background-repeat: repeat;
     image-rendering: crisp-edges;
@@ -31,6 +36,7 @@ body {
 
 #canvas {
 	display: block;
+	filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
 }
 
 #canvas:focus {
@@ -39,27 +45,23 @@ body {
 
 #status, #status-splash, #status-progress {
 	position: absolute;
-	left: 0;
-	right: 0;
-}
 
-#status, #status-splash {
-	top: 0;
-	bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
 }
 
 #status {
+	height: 600px;
+	width: 800px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	visibility: hidden;
 
-	background: linear-gradient(
-        rgba(0, 0, 0, 0.853), 
-        rgba(0, 0, 0, 0.938)
-      ), 
-      url('tile2.png');;
+	background-color: black;
     background-size: 25%;
     background-repeat: repeat;
     image-rendering: crisp-edges;
@@ -92,6 +94,7 @@ body {
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
+	filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
 }
 
 #status-splash.use-filter--false {
@@ -121,12 +124,51 @@ body {
 	text-align: center;
 	z-index: 1;
 }
+
+#zobiquariumTop{
+	position: absolute;
+	top: 5vh;
+	font-family:  Helvetica, Arial, sans-serif;
+	color: rgb(255, 255, 255);
+	filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.61));
+}
+#zobiquariumBottom{
+	position: absolute;
+	bottom: 5vh;
+	font-family:  Helvetica, Arial, sans-serif;
+	color: rgb(255, 255, 255);
+	filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.61));
+}
+#bgRect{
+	position: absolute;
+	height: 70vh;
+	width: 45vw;
+	background-color: rgb(32, 34, 32);
+	z-index: -10;
+	filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.61));
+}
+#twitter{
+	position: absolute;
+	scale: 0.5;
+	top: 85.2vh;
+	left: 26.2vw;
+	filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.61));
+}
+#twitter :hover{
+	filter: drop-shadow(0 0 0.3rem rgb(0, 110, 255));
+}
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
 	</head>
 	<body>
+
+		<div id="bgRect"></div>
+		<h1 id="zobiquariumTop">ZOMBIQUARIUM 🤯</h1>
+		<h1 id="zobiquariumBottom">WOW 🧟🧟🧟</h1>
+		<a id="twitter" href="https://twitter.com/intent/tweet?text=I'm%20playing%20Tuffsteins%20AWESOME%20Zombiquarium%20Simulator%20@%20Tuffstein.at%20Oh%20Yeah!%0A%23PVZ%20%23Gaming"><img src="twittershare.png" alt="twitter"></a>
+
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
 		</canvas>
